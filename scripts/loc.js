@@ -10,17 +10,22 @@ var enResources = {
         "share-link": "Get link to current location",
 
         "uk": "UK",
+        "ua": "Ukraine",
         "ru": "Russia",
         "us": "United States",
         "other": "Other",
 
         "uk-sibson": "Sibson",
         "uk-chatteris": "Chatteris",
+        "ua-tsuniv": "Tsuniv",
+        "ua-mayskoe": "Mayskoe",
         "ru-puschino": "Puschino",
         "ru-kolomna": "Kolomna",
         "ru-vatulino": "Vatulino",
         "other-dubai": "Dubai",
         "other-red-square": "Red Square",
+        "other-khreschatyk": "Khreschatyk",
+        "us-pepperell": "Pepperell",
         "us-lodi": "Lodi",
         "us-elsinore": "Elsinore",
         "us-eloy": "Eloy",
@@ -53,16 +58,20 @@ var enResources = {
         "share-link": "Получить ссылку на текущую точку",
 
         "uk": "Англия",
+        "ua": "Украина",
         "ru": "Россия",
         "us": "США",
         "other": "Другое",
 
         "uk-sibson": "Сибсон",
+        "ua-tsuniv": "Цунев",
+        "ua-mayskoe": "Майское",
         "ru-puschino": "Пущино",
         "ru-kolomna": "Коломна",
         "ru-vatulino": "Ватулино",
         "other-dubai": "Дубай",
         "other-red-square": "Красная площадь",
+        "other-khreschatyk": "Хрещатик",
         "us-statue-of-liberty": "Статуя свободы",
 
         "custom": "Из поиска"

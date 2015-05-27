@@ -5,11 +5,15 @@ function SimulatorViewModel() {
     var dropzones = {
         "uk-sibson": [52.560706, -0.395692],
         "uk-chatteris": [52.48866, 0.086044],
+        "ua-tsuniv": [49.824581, 23.688708],
+        "ua-mayskoe": [48.489486, 35.630640],
         "ru-puschino": [54.790046, 37.642547],
         "ru-kolomna": [55.091914, 38.917231],
         "ru-vatulino": [55.663505, 36.142181],
         "other-dubai": [25.090282, 55.135681],
         "other-red-square": [55.754216, 37.620083],
+        "other-khreschatyk": [50.449943, 30.524030],
+        "us-pepperell": [42.695713, -71.551762],
         "us-lodi": [38.199366, -121.264474],
         "us-chicago": [41.399797, -88.792626],
         "us-elsinore": [33.631444, -117.296746],
@@ -22,20 +26,26 @@ function SimulatorViewModel() {
 
     self.dzMenu = [
         {
+            name: 'us',
+            members: [ 'us-pepperell', 'us-lodi', 'us-elsinore', 'us-skydance', 'us-eloy', 'us-perris', 'us-chicago', 'us-statue-of-liberty' ]
+        },
+        {
             name: 'uk',
             members: [ 'uk-sibson', 'uk-chatteris' ]
         },
         {
+            name: 'ua',
+            members: [ 'ua-tsuniv', 'ua-mayskoe'],
+        },
+
+        {
             name: 'ru',
             members: [ 'ru-puschino', 'ru-vatulino', 'ru-kolomna' ],
         },
-        {
-            name: 'us',
-            members: [ 'us-lodi', 'us-elsinore', 'us-skydance', 'us-eloy', 'us-perris', 'us-chicago', 'us-statue-of-liberty' ]
-        },
+
         {
             name: 'other',
-            members: [ 'other-dubai', 'other-red-square' ]
+            members: [ 'other-dubai', 'other-red-square', 'other-khreschatyk' ]
         }
     ];
 
@@ -51,7 +61,7 @@ function SimulatorViewModel() {
 
     self.display = {
         language: ko.observable("en"),
-        unitSystem: ko.observable("metric"),
+        unitSystem: ko.observable("imperial"),
 
         steadyPoint: ko.observable(false),
         reachset: ko.observable(false),
@@ -247,7 +257,7 @@ function SimulatorViewModel() {
         }, this, { deferEvaluation: true })
     };
 
-    self.location.id("uk-sibson");
+    self.location.id("us-pepperell");
 
     self.reachSetAltitude = ko.computed(function() {
         return self.simulation.flying() ? self.canopy.altitude() : self.pattern.openingAltitude();
